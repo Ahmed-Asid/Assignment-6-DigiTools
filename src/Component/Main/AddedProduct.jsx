@@ -1,4 +1,9 @@
-export default function AddedProduct({ addedProduct }) {
+export default function AddedProduct({ addedProduct, removeProduct }) {
+
+    const handleRemove = () => {
+        removeProduct(addedProduct);
+    }
+
     return (
         <div className="p-4 rounded-2xl bg-gray-100 flex justify-between items-center">
             <div className="flex gap-4">
@@ -10,7 +15,7 @@ export default function AddedProduct({ addedProduct }) {
                     <p className="text-gray-400">${addedProduct.price}</p>
                 </div>
             </div>
-            <div className="btn btn-ghost text-red-500">Remove</div>
+            <div onClick={() => handleRemove()} className="btn btn-ghost text-red-500">Remove</div>
         </div>
     )
 }

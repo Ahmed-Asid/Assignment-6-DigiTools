@@ -12,8 +12,13 @@ export default function Main() {
     const productsPromise = fetchProducts();
     const [cartAdded, setCartAdded] = useState([]);
     console.log(cartAdded)
+
     const getProduct = (product) => {
         setCartAdded(p => [...p, product])
+    }
+
+    const removeProduct = (addedProduct) => {
+        setCartAdded(p => p.filter(r => r.id !== addedProduct.id))
     }
 
     const clear = () => {
@@ -40,7 +45,7 @@ export default function Main() {
                 </Suspense>
             }
             {
-                active === 'cart' && <Cart cartAdded={cartAdded} clear={clear}></Cart>
+                active === 'cart' && <Cart cartAdded={cartAdded} clear={clear} removeProduct={removeProduct}></Cart>
             }
         </>
     )

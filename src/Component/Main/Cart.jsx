@@ -1,6 +1,6 @@
 import AddedProduct from "./AddedProduct";
 
-export default function Cart({ cartAdded, clear }) {
+export default function Cart({ cartAdded, clear, removeProduct }) {
 
     const price = cartAdded.map(product => product.price);
     const total = (arr) => {
@@ -16,7 +16,7 @@ export default function Cart({ cartAdded, clear }) {
             <p className="text-2xl font-bold">Your Cart</p>
             <div className="space-y-4">
                 {
-                    cartAdded.map(addedProduct => <AddedProduct key={addedProduct.id} addedProduct={addedProduct}></AddedProduct>)
+                    cartAdded.map(addedProduct => <AddedProduct key={addedProduct.id} addedProduct={addedProduct} removeProduct={removeProduct}></AddedProduct>)
                 }
             </div>
             <div className="flex justify-between">
