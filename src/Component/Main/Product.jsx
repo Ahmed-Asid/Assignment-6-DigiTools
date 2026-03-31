@@ -1,6 +1,13 @@
 import { Check } from "lucide-react"
 
-export default function Product({ product }) {
+
+export default function Product({ product, getProduct, cartAdded }) {
+
+    const isDisabled = cartAdded.some(p => p.id === product.id)
+    const handleBuy = (product) => {
+        getProduct(product);
+    }
+
     return (
         <div className="p-6 space-y-4 border-2 border-gray-200 rounded-2xl relative">
             <div className={`absolute top-2 right-2 badge badge-soft ${product.tagType === 'new' ? 'badge-success' : product.tagType === 'popular' ? 'badge-primary' : 'badge-warning'}`}>{product.tag}</div>
@@ -15,7 +22,7 @@ export default function Product({ product }) {
                 <p className="flex gap-2"><Check color="#04f62c" />{product.features[1]}</p>
                 <p className="flex gap-2"><Check color="#04f62c" />{product.features[2]}</p>
             </div>
-            <div className={`btn w-full px-4 py-3 rounded-full bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white`}>Buy Now</div>
+            <button onClick={() => handleBuy(product)} className={`btn w-full px-4 py-3 rounded-full text-white ${isDisabled ? 'bg-green-200' : 'bg-linear-to-r from-[#4f39f6] to-[#9514fa]'}`} disabled={isDisabled}>{isDisabled ? 'Added to Cart' : 'Buy Now'}</button>
         </div>
     )
 }
