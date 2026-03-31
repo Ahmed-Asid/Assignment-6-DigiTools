@@ -1,6 +1,7 @@
 import Cart from "./Cart";
 import Products from "./Products";
 import { Suspense, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 const fetchProducts = async () => {
     const res = await fetch('/data.json');
@@ -31,6 +32,7 @@ export default function Main() {
 
     return (
         <>
+            <ToastContainer />
             <div className="space-y-4 text-center">
                 <p className="text-5xl font-bold">Premium Digital Tools</p>
                 <p className="text-gray-400">Choose from our curated collection of premium digital products designed<br />to boost your productivity and creativity.</p>

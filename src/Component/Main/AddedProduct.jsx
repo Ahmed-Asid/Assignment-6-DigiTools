@@ -1,7 +1,10 @@
+import { toast } from 'react-toastify';
+
 export default function AddedProduct({ addedProduct, removeProduct }) {
 
     const handleRemove = () => {
         removeProduct(addedProduct);
+        toast.error(`${addedProduct.name} removed from the cart!`)
     }
 
     return (

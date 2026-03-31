@@ -1,4 +1,5 @@
 import { Check } from "lucide-react"
+import { toast } from 'react-toastify';
 
 
 export default function Product({ product, getProduct, cartAdded }) {
@@ -6,6 +7,7 @@ export default function Product({ product, getProduct, cartAdded }) {
     const isDisabled = cartAdded.some(p => p.id === product.id)
     const handleBuy = (product) => {
         getProduct(product);
+        toast.success(`${product.name} added to cart!`);
     }
 
     return (
