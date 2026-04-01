@@ -4,6 +4,7 @@ import Banner from './Component/Header/Banner'
 import Stats from './Component/Header/Stats'
 import Main from './Component/Main/Main'
 import Steps from './Component/Steps & Pricing/Steps'
+import Pricing from './Component/Steps & Pricing/Pricing'
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Main></Main>
       </div>
       <Steps></Steps>
+      <Pricing></Pricing>
     </>
   )
 }
