@@ -4,8 +4,8 @@ import hero from '../../assets/banner.png'
 
 export default function Banner() {
     return (
-        <div className="flex items-center gap-15 mt-15">
-            <div className="flex flex-col gap-8 max-w-160px w-[60%]">
+        <div className="flex flex-col md:flex-row items-center gap-15 mt-15">
+            <div className="flex flex-col gap-8 md:w-[60%]">
 
                 <div className="space-y-4">
                     <div className="px-4 py-2 rounded-full bg-[#e1e7ff] inline-flex gap-2 items-center">
@@ -17,7 +17,7 @@ export default function Banner() {
                         <span className="bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">New: AI-Powered Tools Available</span>
                     </div>
 
-                    <p className="text-7xl font-extrabold">Supercharge Your Digital Workflow</p>
+                    <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold">Supercharge Your Digital Workflow</p>
                     <p className="text-gray-400 text-lg">Access premium AI tools, design assets, templates, and productivity <br /> software—all in one place. Start creating faster today. <br /> Explore Products
                     </p>
                 </div>
@@ -28,8 +28,8 @@ export default function Banner() {
                 </div>
             </div>
 
-            <div>
-                <img src={hero} alt="" />
+            <div className="object-contain">
+                <img src={hero} alt="" className="w-full" />
             </div>
         </div>
     )

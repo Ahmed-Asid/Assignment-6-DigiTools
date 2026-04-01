@@ -1,7 +1,7 @@
 import Cart from "./Cart";
 import Products from "./Products";
 import { Suspense, useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 
 const fetchProducts = async () => {
     const res = await fetch('/data.json');
