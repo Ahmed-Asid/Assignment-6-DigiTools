@@ -9,8 +9,8 @@ export default function AddedProduct({ addedProduct, removeProduct }) {
 
     return (
         <div className="p-4 rounded-2xl bg-gray-100 flex justify-between items-center">
-            <div className="flex gap-4">
-                <div className="p-3 border border-gray-200 inline-flex rounded-full bg-white">
+            <div className="flex flex-col sm:flex-row gap-4">
+                <div className="p-3 border border-gray-200 w-fit rounded-full bg-white">
                     <img src={`${addedProduct.icon}`} alt="" />
                 </div>
                 <div>

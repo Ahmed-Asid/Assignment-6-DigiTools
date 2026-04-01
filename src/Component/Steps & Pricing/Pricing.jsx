@@ -11,7 +11,7 @@ export default function Pricing() {
 
     return (
         <div className="w-[90%] md:w-[85%] lg:w-[75%] mx-auto py-30 space-y-10 flex flex-col items-center">
-            <div className="grid md:grid-cols-3 gap-6 w-full">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                 {pricing.map((price) => (
                     <div key={price.id} className={`p-6 rounded-2xl border border-gray-200 ${price.highlight ? 'bg-linear-to-r from-[#4f39f6] to-[#9514fa]' : 'bg-gray-50'} flex flex-col space-y-6 relative`}>
                         {price.highlight && <div className="badge badge-warning text-amber-700 absolute -top-2 right-32">{price.tag}</div>}
