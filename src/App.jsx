@@ -5,6 +5,8 @@ import Stats from './Component/Header/Stats'
 import Main from './Component/Main/Main'
 import Steps from './Component/Steps & Pricing/Steps'
 import Pricing from './Component/Steps & Pricing/Pricing'
+import FreeTrial from './Component/Steps & Pricing/FreeTrial'
+import Footer from './Component/Footer/Footer'
 
 
 
@@ -23,6 +25,8 @@ function App() {
       </div>
       <Steps></Steps>
       <Pricing></Pricing>
+      <FreeTrial></FreeTrial>
+      <Footer></Footer>
     </>
   )
 }

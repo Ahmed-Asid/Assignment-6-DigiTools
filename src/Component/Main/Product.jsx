@@ -26,7 +26,6 @@ export default function Product({ product, getProduct, cartAdded }) {
                     <p className="flex gap-2"><Check color="#04f62c" />{product.features[2]}</p>
                 </div>
             </div>
-            {/* make the buy now button to always stay in the bottom */}
             <button onClick={() => handleBuy(product)} className={`btn w-full mt-auto px-4 py-3 rounded-full text-white ${isDisabled ? 'bg-green-200' : 'bg-linear-to-r from-[#4f39f6] to-[#9514fa]'}`} disabled={isDisabled}>{isDisabled ? 'Added to Cart' : 'Buy Now'}</button>
         </div>
     )

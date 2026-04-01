@@ -1,4 +1,4 @@
-import { Menu, ShoppingCart } from 'lucide-react'
+import { Menu, ShoppingCart } from 'lucide-react';
 
 export default function Navbar() {
     return (
@@ -41,7 +41,6 @@ export default function Navbar() {
                         <a href="#"><p>Login</p></a>
                         <div className='btn px-2 py-1.5 md:px-4 md:py-3 rounded-[1000px] bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white'>Get Started</div>
                     </ul>
-                    {/* fix the login dropdown */}
                 </div>
 
                 <div className='hidden items-center gap-2 md:gap-4 sm:flex'>
