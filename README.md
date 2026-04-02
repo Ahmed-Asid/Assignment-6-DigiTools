@@ -6,6 +6,6 @@ We made this React based webapp in vite with Html, Css and Javascript.Tailwind c
 
 Features:
 
-Dynamic Cart & Real-time State Management
-Interactive product catalog
-Toast notification system
+Dynamic Cart & Real-time State Management.
+Interactive product catalog.
+Toast notification system.
